@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Payoo</title>
+    
+<link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.10/dist/full.min.css" rel="stylesheet" type="text/css" />
+<script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+          theme: {
+            extend: {
+              colors: {
+                clifford: '#da373d',
+              }
+            }
+          }
+        }
+      </script>
+</head>
+<body class="container  flex mx-auto  ">
+
+    <div class="mockup-phone">
+        <div class="camera"></div>
+        <div class="display">
+          <div class="artboard artboard-demo phone-2">
+            <div class="stats shadow">
+                <div class="stat">
+                  <div class="stat-title">Account Balance</div>
+                  <div class="stat-value" ><p id="CurrentBalance">5400</p></div>
+             
+                </div>
+              </div>
+              <div class="my-4">
+                <button id="Add_money_button" class="btn btn-lg">Add Money</button>
+                <button id="out_money_button" class="btn btn-lg">Cash Out</button>
+                <button id="transaction_money_button" class="btn btn-lg">Transaction</button>
+                <button id="transaction_history_button" class="btn btn-lg">Transaction history</button>
+              </div>
+              
+              <div class="divider"></div>
+
+        
+              <!-- add money start -->
+              <div class="card bg-base-100 w-full max-w-sm shrink-0 shadow-2xl">
+                <form id="AddForm" class="card-body hidden">
+                  <div class="form-control">
+                    <label class="label">
+                      <span class="label-text">Amount</span>
+                    </label>
+                    <input id="addbalance" type="number" placeholder="Amount " class="input input-bordered" required />
+                  </div>
+                  <div class="form-control">
+                    <label class="label">
+                      <span class="label-text">Pin</span>
+                    </label>
+                    <input id="addpin" type="password" placeholder="pin" class="input input-bordered" required />
+                 
+                  </div>
+                  <div class="form-control mt-6">
+                    <button id="addbutton" class="btn btn-primary">Add money</button>
+                  </div>
+                </form>
+              </div>
+              <!-- add money end -->
+               <!-- cash out -->
+              <div class="card bg-base-100 w-full max-w-sm shrink-0 shadow-2xl">
+                <form id="outForm" class="card-body hidden">
+                  <div class="form-control">
+                    <label class="label">
+                      <span class="label-text">Amount</span>
+                    </label>
+                    <input id="outbalance" type="number" placeholder="Amount " class="input input-bordered" required />
+                  </div>
+                  <div class="form-control">
+                    <label class="label">
+                      <span class="label-text">Pin</span>
+                    </label>
+                    <input id="outpin" type="password" placeholder="pin" class="input input-bordered" required />
+                 
+                  </div>
+                  <div class="form-control mt-6">
+                    <button id="Cashoutbutton" class="btn btn-primary">Cash Out</button>
+                  </div>
+                </form>
+              </div>
+              <!-- cash out end -->
+               <!-- transaction starrt -->
+               <div class="card bg-base-100 w-full max-w-sm shrink-0 shadow-2xl">
+                <form id="transaction" class="card-body hidden ">
+                    <div class="form-control">
+                        <label class="label">
+                          <span class="label-text">Transaction Id/Numbe</span>
+                        </label>
+                        <input id="" type="number" placeholder="id/number " class="input input-bordered" required />
+                      </div>
+                  <div class="form-control">
+                    <label class="label">
+                      <span class="label-text">Amount</span>
+                    </label>
+                    <input id="transbalance" type="number" placeholder="Amount " class="input input-bordered" required />
+                  </div>
+                  <div class="form-control">
+                    <label class="label">
+                      <span class="label-text">Pin</span>
+                    </label>
+                    <input id="tranpin" type="password" placeholder="pin" class="input input-bordered" required />
+                 
+                  </div>
+                  <div class="form-control mt-6">
+                    <button id="transactionbutton" class="btn btn-primary">Transaction</button>
+                  </div>
+                </form>
+              </div>
+
+               <!-- transaction end -->
+
+               <!-- history start-->
+               <div class="card bg-base-100 w-full max-w-sm shrink-0 shadow-2xl">
+                <form id="transaction_history" class="card-body hidden ">
+          <h1> Transaction history</h1>
+               <div id="history_container">
+              
+                   </div>
+           
+                </form>
+              </div>
+               <!-- history end-->
+
+          </div>
+        </div>
+      </div>
+
+    <script src="home.js"></script>
+     <script src="utilitize.js"></script>
+     <script src="call.js"></script>
+     <script src="addmoneyto.js"></script>
+</body>
+</html>
